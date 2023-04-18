@@ -30,7 +30,7 @@ public class MilestoneController {
     }
 
     //Code for reading or getting milestone
-    @GetMapping("{id}")
+    @GetMapping("{}")
     public ResponseEntity<MilestoneEntity> getMilestoneById(@PathVariable long id){
         MilestoneEntity milestoneEntity = milestoneRepository.findById(id)
                 .orElseThrow(()->new MilestoneNotFoundException("Milestone not found"));
